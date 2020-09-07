@@ -27,26 +27,27 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0
+
 }
 
 /* Style the list items inside the menu */
 nav li {
-  display: inline-block;
+  display: inline;
+  padding: 10px 20px;
 
 
 }
 
 nav li:hover {
   background-color: #4e89ae
-
 }
 /* Style the links inside the list */
 nav li a {
-
   text-decoration: none;
   color: #e4e4e4;
-  padding: 10px 20px;
+    display: inline;
+
 
 }
 
