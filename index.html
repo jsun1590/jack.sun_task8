@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="layout.css"> <!-- links to the layout css sheet -->
 </head>
 
-
 <body>
 
   <header>
@@ -16,18 +15,51 @@
   </header>
 
 
-  <nav>
+  <nav id="navbar">
     <ul>
-      <li> <a href="about.html">About</a> </li>
-      <li> <a href="www.google.com">Item 2</a> </li>
-      <li> <a href="www.google.com">Item 3</a> </li>
+      <li><img src="assets/logo_hand.svg" alt="logo" id="logo_hand"></li>
+      <li><img src="assets/logo_gear.svg" alt="logo" id="logo_gear"></li>
+      <li> <a href="about.html">About Us</a> </li>
+      <li> <a href="www.google.com">Store</a> </li>
+      <li> <a href="www.google.com">Event</a> </li>
+      <div class="filler"></div>
+      <li> <a href="www.google.com">Contact Us</a> </li>
     </ul>
   </nav>
 
   <content>
     <h1>Heading</h1>
-    <p>Information</p>
-    <p>More information</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ipsa rerum nostrum ea, maxime quis sequi culpa, reprehenderit quod excepturi dicta ratione quisquam, aliquam ut officia nisi facilis debitis! Molestiae.</p>
   </content>
 
 
@@ -35,6 +67,22 @@
     <p>Footer information</p>
   </footer>
 
+  <script>
+    window.onscroll = function() {
+      myFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 </body>
 
 </html>
