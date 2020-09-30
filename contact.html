@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="layout.css"> <!-- links to the layout css sheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <header>
+    <h2>hello</h2>
+  </header>
+  <nav id="topnav" class="topnav">
+    <!-- <a> <img src="assets/logo/logo_hand.svg" alt="logo1" class="active" id="logo_hand"> </a>
+    <a href="index.html" class="image_link"><img src="assets/logo/logo_gear.svg" alt="logo2" class="active" id="logo_gear"></a> -->
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="store.html">Store</a>
+    <a href="blog.html">Blog</a>
+    <a href="events.html">Events</a>
+    <a class="float_right active" href="contact.html">Contact Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i></a>
+  </nav>
+
+<content>
+
+  <div class="container">
+  <form target="_blank" action="http://jack-task8.atwebpages.com/email.php" method="post">
+
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" placeholder="Enter your first name" required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" placeholder="Enter your last name" required>
+
+    <label for="email">E-mail</label>
+    <input type="text" name="email" placeholder="Enter your email address" required>
+
+    <label for="subject">Message Subject</label>
+    <input type="text" name="subject" placeholder="Enter a subject" required>
+
+    <label for="content">Message Content</label>
+    <textarea name="content" placeholder="Enter your message" style="height:200px" required></textarea>
+
+    <label for="self">Email a copy of this message to yourself</label>
+    <br>
+    <input type="radio" name="self-send" value="yes" checked>
+    <label for="self">Yes</label><br>
+    <input type="radio" name="self-send" value="no">
+    <label for="self">No</label><br>
+    <br>
+
+    <input type="submit" name="submit" value="Submit">
+
+  </form>
+</div>
+</content>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
