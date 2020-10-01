@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Barcade Brawl";
   src: url("assets/fonts/Barcade-Brawl.woff2") format("woff2"),
-    url("assets/fonts/Barcade-Brawl.woff") format("woff");
+       url("assets/fonts/Barcade-Brawl.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,7 @@ header {
   box-shadow: 0px 1px 10px #656565;
   position: sticky;
   top: 0;
-  z-index: 100;
+
   overflow: hidden;
   background-color: #333;
 }
