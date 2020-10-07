@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="layout.css"> <!-- links to the layout css sheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fddaefb134.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 
@@ -15,11 +16,15 @@
 <body>
 
   <header>
-    <img src="assets/logo/logo_hand.svg" alt="logo1" class="active" id="logo_hand">
-    <a href="index.html" class="image_link">
+    <img src="assets/logo/logo_hand.svg" alt="logo1" id="logo_hand">
+    <a href="index.html">
       <img src="assets/logo/logo_gear.svg" alt="logo2" id="logo_gear"></a>
 
-    <h1>Retro Revolution</h1>
+    <h1><span id="title1">Retro</span>
+      <span id="title2"> Revolution</span></h1>
+
+    <h2>New Zealand's Leading Retro Game Store </h2>
+
   </header>
 
 
@@ -30,7 +35,7 @@
     <a href="blog.html">Blog</a>
     <a href="events.html">Events</a>
     <a class="float_right" href="contact.html">Contact Us</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" onclick="responsive_nav()">
     <i class="fas fa-bars"></i></a>
   </nav>
 
@@ -79,6 +84,8 @@
     <i class="fab fa-twitter-square"></i>
     <i class="fab fa-facebook-square"></i>
     <i class="fab fa-instagram-square"></i>
+    <br>
+    <p>Copyright &#169; 2020 Retro Revolution | All rights reserved.</p>
   </div>
   </footer>
 
