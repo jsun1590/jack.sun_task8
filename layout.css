@@ -29,7 +29,7 @@ body {
 /* Style the header */
 header {
   position: relative;
-  background-color: #666;
+background: linear-gradient(180deg, rgba(165,162,162,1) 20%, rgba(229,229,229,1) 20%, rgba(229,229,229,1) 80%, rgba(221,32,32,1) 80%);
   color: white;
   height: 130px;
 }
@@ -51,10 +51,15 @@ header h1 {
   margin: 0;
   padding: 0;
   top: 50%;
-  left: 50%;
+  left: calc(50% + 60px);
   transform: translate(-50%,-50%);
   font-size: 3em;
-  
+  white-space: nowrap;
+background: linear-gradient(180deg, rgba(255,240,69,1) 22%, rgba(255,72,22,1) 54%, rgba(255,0,194,1) 75%);
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
 }
 header h2 {
   position: absolute;
@@ -62,7 +67,9 @@ header h2 {
   margin: 0;
   padding: 0;
   right: 15px;
-  bottom: 5%;
+  bottom: 3%;
+  font-size: 1em;
+  white-space: nowrap;
 }
 
 #logo_hand {
@@ -100,7 +107,7 @@ header h2 {
   font-family: "Barcade Brawl";
   word-spacing: -5px;
   text-align: center;
-  padding: 20px 16px;
+  padding: 20px 15px;
   text-decoration: none;
   font-size: 17px;
   transition: background-color 0.2s ease-in-out;
@@ -235,7 +242,6 @@ footer p {
 
 @media (max-width: 900px) {
   header h1 {
-  font-size: 1em;
 
   }
 }
