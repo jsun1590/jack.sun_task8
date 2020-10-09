@@ -29,9 +29,10 @@ body {
 /* Style the header */
 header {
   position: relative;
-background: linear-gradient(180deg, rgba(165,162,162,1) 20%, rgba(229,229,229,1) 20%, rgba(229,229,229,1) 80%, rgba(221,32,32,1) 80%);
+  background: linear-gradient(180deg, rgba(229,229,229,1) 80%,
+    rgba(221,32,32,1) 80%);
   color: white;
-  height: 130px;
+  height: 160px;
 }
 
 header #title1 {
@@ -43,20 +44,21 @@ header #title1 {
 header #title2 {
   font-family: "Rubik Mono One";
   font-weight: normal;
+  padding: 0;
 }
 
 header h1 {
   position: absolute;
   display: inline;
   margin: 0;
-  padding: 0;
-  top: 50%;
+  top: 67px;
   left: calc(50% + 60px);
   transform: translate(-50%,-50%);
-  font-size: 3em;
+  font-size: 4em;
   white-space: nowrap;
-background: linear-gradient(180deg, rgba(255,240,69,1) 22%, rgba(255,72,22,1) 54%, rgba(255,0,194,1) 75%);
-
+  background: linear-gradient(180deg, rgba(255,0,194,1) 22%,
+    rgba(255,72,22,1) 54%, rgba(255,240,69,1) 75%);
+  -webkit-text-stroke: 0.5px #1c57c9;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 
@@ -65,7 +67,6 @@ header h2 {
   position: absolute;
   display: inline;
   margin: 0;
-  padding: 0;
   right: 15px;
   bottom: 3%;
   font-size: 1em;
@@ -94,6 +95,7 @@ header h2 {
 
 .topnav {
   box-shadow: 0px 1px 10px #656565;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -120,7 +122,7 @@ header h2 {
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: rgba(221,32,32,1);
   color: white;
 }
 
@@ -185,6 +187,7 @@ footer {
 footer p {
   display: inline;
   color: red;
+  float: left;
 }
 
 .social {
@@ -198,9 +201,13 @@ footer p {
 }
 .fa-instagram-square {
 
-
 }
 
+.copyright {
+  float: none;
+  left: 50%;
+
+}
 /* Responsive layout - */
 @media (max-width: 900px) {
   nav, article {
