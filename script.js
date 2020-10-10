@@ -6,3 +6,9 @@ function responsive_nav() {
     nav.className = "topnav";
   }
 }
+
+window.addEventListener('resize', function() {
+  document.getElementById("container").clientHeight =
+  document.getElementById("landing").clientHeight;
+  console.log(document.getElementById("landing").clientHeight)
+});
