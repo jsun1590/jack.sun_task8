@@ -22,7 +22,7 @@
          url("assets/fonts/AzonixRegular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 
@@ -42,7 +42,6 @@ header {
   position: relative;
   background: linear-gradient(180deg, rgba(229,229,229,1) 80%,
     rgba(221,32,32,1) 80%);
-  color: white;
   height: 160px;
 }
 
@@ -81,26 +80,26 @@ header h2 {
   right: 15px;
   bottom: 3%;
   font-size: 1em;
+  color: white;
   white-space: nowrap;
 }
 
-#logo_hand {
+#logo-hand {
   position: absolute;
   height: 67px;
   transform: translate(34px, 35px);
 
 }
 
-#logo_gear {
+#logo-gear {
   position: absolute;
   height: 100px;
   transform: translate(15px, 15px);
   border-radius: 50%;
-
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
-#logo_gear:hover {
+#logo-gear:hover {
   transform: translate(15px, 15px) rotate(60deg);
 }
 
@@ -124,17 +123,22 @@ header h2 {
   padding: 20px 15px;
   text-decoration: none;
   font-size: 17px;
-  transition: background-color 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s ease-in-out;
 
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+  border-bottom: 3px solid rgba(248, 153, 58, 1);
+
 }
+
 
 .topnav a.active {
   background-color: rgba(221,32,32,1);
+  border-bottom: 3px solid rgb(248, 153, 58);
   color: white;
 }
 
@@ -142,23 +146,27 @@ header h2 {
   display: none;
 }
 
-.topnav .float_right {
+.topnav .float-right {
   float: right;
 }
 
 /* Style the main content section of the site*/
 main {
+  display: grid;
   padding: 0;
   width: 100%;
   background-color: #f1f1f1;
-  background-clip: content-box;
+
 }
 
+
 main #container {
-  position: relative;
-  background: black;
+  position: fixed;
+  background: rgba(221,32,32,1);
   width: 100%;
   height: auto;
+  top: 0;
+  z-index: -1;
 
 
 }
@@ -178,12 +186,11 @@ main #overlay {
   z-index: 2;
   color: white;
   font-size: 6vw;
-  transform: translate(-50%,-50%);
-  top: 50%;
+  top: 50vw;
   left: 50%;
+  transform: translate(-50%);
 
 }
-
 
 main h1, p {
   padding: 0 20px;
@@ -225,35 +232,89 @@ input[type=submit]:hover {
 
 /* Style the footer */
 footer {
+  display: grid;
+  grid-template-areas:
+    "logo slogan"
+    "sitemap contact"
+    "copyright social";
+  grid-template-rows: 30% 1fr 20%;
+  grid-template-columns: 1fr 1fr;
   background-color: black;
-  height: 80px
+  height: 400px;
 
+}
+
+footer section {
+  display: flex;
+  /* border: solid 3px green; */
 }
 
 footer p {
   display: inline;
-  color: red;
-  float: left;
-}
-
-.social {
-    float: right;
-}
-.fab {
   color: white;
-  padding: 5px 5px;
-  font-size: 40px;
-
-}
-.fa-instagram-square {
-
+  margin: 0;
+  padding: 0;
 }
 
-.copyright {
-  float: none;
-  left: 50%;
+footer a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+footer h2 {
+  color: white;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+#ft-logo {
+  grid-area: logo;
+  justify-content: left;
+}
+
+#ft-slogan {
+  grid-area: slogan;
 
 }
+
+#ft-sitemap {
+  grid-area: sitemap;
+  justify-content: center;
+}
+
+#ft-contact {
+  grid-area: contact;
+  justify-content: center;
+}
+
+#ft-copyright {
+  grid-area: copyright;
+  align-items: center;
+  justify-content: center;
+}
+
+#ft-social {
+  grid-area: social;
+}
+
+.fab {
+  color: red;
+  white-space: nowrap;
+  font-size: 2em;
+  padding: 0 5px;
+
+}
+
 /* Responsive layout - */
 @media (max-width: 900px) {
   nav, article {
@@ -286,15 +347,20 @@ footer p {
     top: 0;
   }
 
+  .topnav .icon:hover {
+    border-bottom: 3px solid transparent;
+  }
+
   .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
-  }
-}
-
-@media (max-width: 900px) {
-  header h1 {
+    border-bottom: 3px solid transparent;
 
   }
+
+  .topnav.responsive a.active {
+    border-bottom: 3px solid transparent;
+  }
+
 }
