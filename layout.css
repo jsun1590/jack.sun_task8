@@ -104,7 +104,7 @@ header h2 {
 }
 
 .topnav {
-  box-shadow: 0px 1px 10px #656565;
+  box-shadow: 0px 1px 10px black;
   clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
   position: sticky;
   top: 0;
@@ -152,10 +152,11 @@ header h2 {
 
 /* Style the main content section of the site*/
 main {
-  display: grid;
+
   padding: 0;
   width: 100%;
   background-color: #f1f1f1;
+  height: 1000px;
 
 }
 
@@ -186,9 +187,11 @@ main #overlay {
   z-index: 2;
   color: white;
   font-size: 6vw;
-  top: 50vw;
+  /* HACK */
+  top: 36vw;
   left: 50%;
-  transform: translate(-50%);
+  /* HACK */
+  transform: translate(-50%,110px);
 
 }
 
@@ -196,6 +199,38 @@ main h1, p {
   padding: 0 20px;
 }
 
+.slick-prev:before, .slick-next:before {
+  color: black !important;
+}
+
+/* the parent */
+.slick-list {
+  margin-left: -25px;
+}
+
+.slick-slide {
+  outline: none;
+  margin-left: 25px;
+}
+
+.slick-initialized .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+main #brands {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+
+
+main #brands img {
+  height: 60px;
+  width: auto;
+}
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -234,18 +269,18 @@ input[type=submit]:hover {
 footer {
   display: grid;
   grid-template-areas:
-    "logo slogan"
-    "sitemap contact"
-    "copyright social";
-  grid-template-rows: 30% 1fr 20%;
-  grid-template-columns: 1fr 1fr;
+    "logo sitemap contact opening"
+    "copyright placeholder placeholder social";
+  grid-template-rows: 1fr 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: black;
-  height: 400px;
+  height: 250px;
 
 }
 
 footer section {
   display: flex;
+  min-width: 0;
   /* border: solid 3px green; */
 }
 
@@ -267,11 +302,13 @@ footer a:hover {
 }
 footer h2 {
   color: white;
+  text-decoration: underline gray;
 }
 
 footer ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .link:hover {
@@ -282,37 +319,56 @@ footer ul {
   justify-content: left;
 }
 
-#ft-slogan {
-  grid-area: slogan;
-
-}
-
 #ft-sitemap {
   grid-area: sitemap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #ft-contact {
   grid-area: contact;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
+#ft-opening {
+  grid-area: opening;
+  justify-content: flex-start;
+
+}
+
+#ft-placeholder {
+  grid-area: placeholder;
+  background-color: #333;
+}
 #ft-copyright {
   grid-area: copyright;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  background-color: #333;
+  white-space: nowrap;
+  z-index: 0;
 }
 
+#ft-copyright p {
+  margin-left: 20px;
+}
 #ft-social {
   grid-area: social;
+  background-color: #333;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
 }
 
-.fab {
+#ft-social .fab {
   color: red;
   white-space: nowrap;
   font-size: 2em;
   padding: 0 5px;
 
+}
+
+#ft-social .fab:last-child{
+  padding-right: 20px;
 }
 
 /* Responsive layout - */

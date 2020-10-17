@@ -1,4 +1,4 @@
-function responsive_nav() {
+function responsiveNav() {
   var nav = document.getElementById("topnav");
   if (nav.className === "topnav") {
     nav.className += " responsive";
@@ -8,10 +8,9 @@ function responsive_nav() {
 }
 
 function landingMargin() {
-  var landingHeight = (document.getElementById("landing").clientHeight - 220).toString()+"px";
+  var landingHeight = (document.getElementById("container").clientHeight - 220).toString()+"px";
   document.getElementById("main").style.marginTop = landingHeight;
 }
-
 
 // attach a submit handler to the form
 $("#contact").submit(function(event) {
@@ -45,7 +44,17 @@ $("#contact").submit(function(event) {
   });
 });
 
-function init() {
-  landingMargin();
-}
+
+$(document).ready(() => {
+  $('#brands .slick').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 200,
+
+slidesToShow: 4,
+
+    swipeToSlide: true,
+  });
+});
+
 window.addEventListener('resize', landingMargin);
