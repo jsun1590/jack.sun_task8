@@ -8,23 +8,46 @@
 }
 
 @font-face {
-    font-family: "SF Alien Encounters";
-    src: url("assets/fonts/SFAlienEncounters.woff2") format("woff2"),
-         url("assets/fonts/SFAlienEncounters.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: "SF Alien Encounters";
+  src: url("assets/fonts/SFAlienEncounters.woff2") format("woff2"),
+       url("assets/fonts/SFAlienEncounters.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 @font-face {
-    font-family: "Azonix";
-    src: url("assets/fonts/AzonixRegular.woff2") format("woff2"),
-         url("assets/fonts/AzonixRegular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: "Azonix";
+  src: url("assets/fonts/AzonixRegular.woff2") format("woff2"),
+       url("assets/fonts/AzonixRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #696969;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #4e4e4e;
+}
 
 * {
   box-sizing: border-box;
@@ -64,34 +87,38 @@ header h1 {
   top: 67px;
   left: calc(50% + 60px);
   transform: translate(-50%,-50%);
-  font-size: 4em;
+  font-size: 6vw;
   white-space: nowrap;
-  background: linear-gradient(180deg, rgba(255,0,194,1) 22%,
-    rgba(255,72,22,1) 54%, rgba(255,240,69,1) 75%);
+  color: rgb(248, 153, 58);
   -webkit-text-stroke: 0.5px #1c57c9;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-
+  transition: background-color 0.4s ease-in-out;
 }
-header h2 {
+
+header section {
   position: absolute;
+  right: 15px;
+  bottom: 6px;
+}
+header h2, i {
+
   display: inline;
   margin: 0;
-  right: 15px;
-  bottom: 3%;
+
+
   font-size: 1em;
   color: white;
   white-space: nowrap;
 }
 
-#logo-hand {
+
+.logo-hand {
   position: absolute;
   height: 67px;
   transform: translate(34px, 35px);
 
 }
 
-#logo-gear {
+.logo-gear {
   position: absolute;
   height: 100px;
   transform: translate(15px, 15px);
@@ -99,7 +126,7 @@ header h2 {
   transition: transform 0.4s ease-in-out;
 }
 
-#logo-gear:hover {
+.logo-gear:hover {
   transform: translate(15px, 15px) rotate(60deg);
 }
 
@@ -156,7 +183,8 @@ main {
   padding: 0;
   width: 100%;
   background-color: #f1f1f1;
-  height: 1000px;
+  height: 2000px;
+  z-index: auto;
 
 }
 
@@ -205,19 +233,23 @@ main h1, p {
 
 /* the parent */
 .slick-list {
-  margin-left: -25px;
+  margin: -12px;
 }
 
 .slick-slide {
   outline: none;
-  margin-left: 25px;
+  margin: 12px;
 }
 
 .slick-initialized .slick-track {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
+main #brands-container {
+  height: 160px;
+  position: relative;
+}
 main #brands {
   position: absolute;
   width: 90%;
@@ -225,12 +257,37 @@ main #brands {
   transform: translate(-50%);
 }
 
-
-
 main #brands img {
+  border: 2px black solid;
   height: 60px;
   width: auto;
 }
+
+main .store {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 300px));
+  grid-auto-rows: 450px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  padding: 10px 10px 10px;
+}
+
+main .store .thumb {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -274,7 +331,7 @@ footer {
   grid-template-rows: 1fr 20%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: black;
-  height: 250px;
+  height: 290px;
 
 }
 
@@ -292,7 +349,6 @@ footer p {
 }
 
 footer a {
-  width: 100%;
   text-decoration: none;
   color: white;
 }
@@ -314,9 +370,23 @@ footer ul {
 .link:hover {
   text-decoration: underline;
 }
+
 #ft-logo {
   grid-area: logo;
-  justify-content: left;
+  justify-content: center;
+}
+
+#ft-logo .logo-full {
+  position: absolute;
+  margin-top: 10px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#ft-logo h1 {
+  margin-top: 50%;
+  color: white;
+
 }
 
 #ft-sitemap {
@@ -363,12 +433,17 @@ footer ul {
   color: red;
   white-space: nowrap;
   font-size: 2em;
-  padding: 0 5px;
-
 }
 
-#ft-social .fab:last-child{
-  padding-right: 20px;
+#ft-social a {
+  margin: 0 5px;
+}
+#ft-social a:first-of-type {
+  margin-left: 10px;
+}
+
+#ft-social a:last-of-type {
+  margin-right: 10px;
 }
 
 /* Responsive layout - */
@@ -412,7 +487,6 @@ footer ul {
     display: block;
     text-align: left;
     border-bottom: 3px solid transparent;
-
   }
 
   .topnav.responsive a.active {

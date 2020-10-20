@@ -14,20 +14,25 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/fddaefb134.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- pseudo json -->
+  <script src="store.js"></script>
 </head>
 
 
 <body onload="landingMargin()">
 
   <header>
-    <img src="assets/logo/logo_hand.svg" alt="logo1" id="logo-hand">
+    <img src="assets/logo/logo_hand.svg" alt="logo1" class="logo-hand">
     <a href="index.html">
-      <img src="assets/logo/logo_gear.svg" alt="logo2" id="logo-gear"></a>
+      <img src="assets/logo/logo_gear.svg" alt="logo2" class="logo-gear"></a>
 
     <h1><span id="title1">Retro</span>
       <span id="title2"> Revolution</span>
     </h1>
-    <h2>New Zealand's Leading Retro Game Store </h2>
+
+    <section>
+      <h2>New Zealand's Leading Retro Game Store</h2>
+    </section>
 
   </header>
 
@@ -52,26 +57,41 @@
       </video>
     </section>
 
-  <h1>test</h1>
+  <h1>Sample Text</h1>
   <hr>
-  <section id=brands>
-  <h2>Partner Brands</h2>
-  <div class="slick">
-    <img src="assets/images/nintendo.svg" alt="nintendo"></img>
-    <img src="assets/images/sega.svg" alt="sega"></img>
-    <img src="assets/images/atari.svg" alt="atari">
-    <img src="assets/images/capcom.svg" alt="capcom">
-    <img src="assets/images/snk.svg" alt="snk">
-    <img src="assets/images/nec.svg" alt="nec">
+  <section id=brands-container>
+  <div id="brands">
+    <h2>Partner Brands</h2>
+    <div class="slick">
+      <img src="assets/images/nintendo.svg" alt="nintendo"></img>
+      <img src="assets/images/sega.svg" alt="sega"></img>
+      <img src="assets/images/atari.svg" alt="atari">
+      <img src="assets/images/capcom.svg" alt="capcom">
+      <img src="assets/images/snk.svg" alt="snk">
+      <img src="assets/images/nec.svg" alt="nec">
+    </div>
   </div>
-  </div>
+  </section>
+
+  <section class="store">
+    <script type="text/template" id="template">
+    <div class="product">
+      <a class="memurl"><img class="thumb"></a>
+      <p class="name"></p>
+      <p class="company"></p>
+      <p class="price"></p>
+      <p class="description"></p>
+    </div>
+  </script>
   </section>
   </main>
 
   <footer>
     <section id="ft-logo">
-      <img src="assets/logo/logo_hand.svg" alt="logo1" id="logo-hand">
-      <img src="assets/logo/logo_gear.svg" alt="logo2" id="logo-gear"></section>
+      <img src="assets/logo/logo_full.svg" alt="logo" class="logo-full"></img>
+      <h1> Retro Revolution </h1>
+
+    </section>
 
     <section id="ft-sitemap">
       <ul>
@@ -118,10 +138,10 @@
     </section>
     <section id="ft-placeholder"></section>
     <section id="ft-social">
-      <p>follow us on:</p>
-      <i class="fab fa-twitter-square"></i>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-instagram-square"></i>
+      <p>Follow us on:</p>
+      <a href="https://twitter.com/retro-revolution"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://facebook.com/retro-revolution"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/retro-revolution"><i class="fab fa-instagram-square"></i></a>
     </section>
   </footer>
 <script src="script.js"></script>
