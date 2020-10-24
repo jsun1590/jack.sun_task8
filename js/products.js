@@ -7,15 +7,17 @@ products =
     "imageSrc": "nes.png",
     "alt": "NES",
     "description": "epic.",
+    "rating": 3.7
   },
 
   {
     "id": 2,
     "name": "Sega Genesis",
-    "price": 200,
+    "price": 20,
     "imageSrc": "genesis.png",
     "alt": "Genesis",
     "description": "pog console.",
+    "rating": 4.7
   },
 
   {
@@ -25,6 +27,7 @@ products =
     "imageSrc": "snes.png",
     "alt": "Genesis",
     "description": "pog console.",
+    "rating": 5
   },
 
 ];

@@ -1,0 +1,103 @@
+#index {
+
+}
+
+#container {
+  position: fixed;
+  background: #dd2020;
+  width: 100%;
+  height: auto;
+  top: 0;
+  z-index: -1;
+
+
+}
+#landing {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+
+}
+#overlay {
+  position: absolute;
+  font-family: "Azonix";
+  font-weight: normal;
+  white-space: nowrap;
+  padding: 0;
+  z-index: 2;
+  color: white;
+  font-size: 6vw;
+  /* HACK */
+  top: 36vw;
+  left: 50%;
+  /* HACK */
+  transform: translate(-50%,110px);
+}
+
+#brands-container .owl-next:focus, .owl-prev:focus {
+  outline: none;
+}
+#brands-container .owl-prev {
+  left: -20px;
+}
+#brands-container .owl-next {
+  right: -20px;
+}
+#brands-container .owl-prev i, .owl-next i {
+  transform : scale(2,5); color: #ccc;
+}
+
+#brands-container {
+  height: 100px;
+  position: relative;
+}
+#brands {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#brands .item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+#brands img {
+  height: auto;
+  width: 80%;
+  transition: 0.2s ease-in-out;
+}
+
+#brands img:hover {
+  width: 85%;
+}
+
+#i-guarantees {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 300px));
+  grid-auto-rows: 350px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  padding: 10px 10px 10px;
+}
+
+#i-guarantees h1 {
+  text-align: center;
+}
+
+#i-guarantees p {
+  text-align: justify;
+}
+
+#i-guarantees .fas, .far{
+  display: block !important;
+  text-align: center;
+  color: rgb(248, 153, 58);
+  font-size: 100px;
+  margin-bottom: 10px;
+}

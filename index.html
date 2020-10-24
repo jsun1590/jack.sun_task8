@@ -5,22 +5,20 @@
   <title>Home | Retro Revolution</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="layout.css"> <!-- links to the layout css sheet -->
-  <link rel="stylesheet" href="https:////cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=block" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/fddaefb134.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- pseudo json -->
-  <script src="store.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
 </head>
 
 
 <body onload="landingMargin()">
-
   <header>
     <img src="assets/logo/logo_hand.svg" alt="logo1" class="logo-hand">
     <a href="index.html">
@@ -63,16 +61,50 @@
 
 
   <hr>
+
+
+  <section id="i-guarantees">
+    <div class="guarantee-container">
+    <i class="fas fa-shipping-fast"></i>
+    <h1>Sonic Fast Shipping</h1>
+    <p>We know how frustrating it is to wait for your products to be delivered.
+      That's why retro Revolution has partnered with Epic Shipping so you can
+      take advantage of their Ovanite&#153; shipping system. Make an order by
+      3pm and we guarantee that your order will arrive the following day!
+      <sup>&#x271D;</sup></p>
+    </div>
+
+    <div class="guarantee-container">
+    <i class="fas fa-award"></i>
+    <h1>Quality Guaranteed</h1>
+    <p>We only source our products from highly reputable suppliers. We also
+      thoroughly inspect and test every single product we receive to futher
+      ensure our products are of the highest quality. Our inspection engineers
+      are fully certified by the Retro Engineer's Association of New Zealand.
+    </p>
+    </div>
+
+    <div class="guarantee-container">
+    <i class="far fa-calendar-check"></i>
+    <h1>30 Days Return Policy</h1>
+    <p>In the unlikely case where you are not completely satisfied with our products,
+    we will happily provide you with a full refund, no questions asked. Simply send us a
+    a message and return the items within 30 days.</p>
+    </div>
+
+
+  </section>
   <section id=brands-container>
   <div id="brands">
     <h2>Partner Brands</h2>
-    <div class="slick">
-      <img src="assets/images/nintendo.svg" alt="nintendo"></img>
-      <img src="assets/images/sega.svg" alt="sega"></img>
-      <img src="assets/images/atari.svg" alt="atari">
-      <img src="assets/images/capcom.svg" alt="capcom">
-      <img src="assets/images/snk.svg" alt="snk">
-      <img src="assets/images/nec.svg" alt="nec">
+    <div id="owl-brands" class="owl-carousel owl-theme">
+      <div class="item"><img src="assets/images/nintendo.svg" alt="nintendo"></div>
+      <div class="item"><img src="assets/images/sega.svg" alt="sega"></div>
+      <div class="item"><img src="assets/images/atari.svg" alt="atari"></div>
+      <div class="item"><img src="assets/images/capcom.svg" alt="capcom"></div>
+      <div class="item"><img src="assets/images/snk.svg" alt="snk"></div>
+      <div class="item"><img src="assets/images/nec.svg" alt="nec"></div>
+      <div class="item"><img src="assets/images/epic.svg" alt="nec"></div>
     </div>
   </div>
   </section>
@@ -136,7 +168,8 @@
       <a href="https://www.instagram.com/retro-revolution"><i class="fab fa-instagram-square"></i></a>
     </section>
   </footer>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>
