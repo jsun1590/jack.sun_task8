@@ -1,12 +1,30 @@
 products =
 [
   {
-    "id": 0,
-    "name": "Nintendo 64",
-    "company": "Nintendo",
-    "price": 69,
-    "imageSrc": "placeholder.png",
-    "alt": "N64",
+    "id": 1,
+    "name": "Nintendo Entertainment System",
+    "price": 120,
+    "imageSrc": "nes.png",
+    "alt": "NES",
+    "description": "epic.",
+  },
+
+  {
+    "id": 2,
+    "name": "Sega Genesis",
+    "price": 200,
+    "imageSrc": "genesis.png",
+    "alt": "Genesis",
     "description": "pog console.",
   },
+
+  {
+    "id": 3,
+    "name": "Super Nintendo Entertainment System",
+    "price": 200,
+    "imageSrc": "snes.png",
+    "alt": "Genesis",
+    "description": "pog console.",
+  },
+
 ];

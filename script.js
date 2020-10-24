@@ -9,11 +9,11 @@ function responsiveNav() {
 
 function landingMargin() {
   var landingHeight = (document.getElementById("container").clientHeight - 220).toString()+"px";
-  document.getElementById("main").style.marginTop = landingHeight;
+  document.getElementById("index").style.marginTop = landingHeight;
 }
 
 // attach a submit handler to the form
-$("#contact").submit(function(event) {
+$("#c-form").submit(function(event) {
 
   // stop form from submitting normally
   event.preventDefault();
@@ -35,7 +35,7 @@ $("#contact").submit(function(event) {
   });
 
   // Alerts the results
-  posting.done(function(data) {
+  posting.done(function() {
     $("#result").text("success");
   });
 
@@ -45,27 +45,28 @@ $("#contact").submit(function(event) {
 });
 
 
-function append_json(data) {
+function append_json() {
   //Set Up the template
   var s = $("#template")[0].innerHTML.trim();
   var holder = document.createElement("div");
   holder.innerHTML = s;
   var template = holder.childNodes;
 
-  data.forEach(function(object) {
+  products.forEach(function(object) {
 
     //Clone Template
     var newItem = $(template).clone();
 
     //Populate it
-    $(newItem).find(".name").html("Product Name: " + object.name);
-    $(newItem).find(".company").html("Company: " + object.company);
-    $(newItem).find(".price").html("Price: $" + object.price.toFixed(2));
-    $(newItem).find(".description").html("Description: " + object.description);
+    $(newItem).find(".name").html(object.name);
+    $(newItem).find(".company").html(object.company);
+    $(newItem).find(".price").html("$" + object.price.toFixed(2));
+    $(newItem).find(".description").html(object.description);
     $(newItem).find(".thumb").attr("src", "assets/images/" + object.imageSrc).attr("alt", object.alt);
+    $(newItem).find(".add").attr("onclick", "addBtnCallback("+(object.id-1).toString()+")");
 
     //Append it
-    $(".store").append(newItem);
+    $("#store-container").append(newItem);
   });
 }
 
@@ -78,12 +79,24 @@ $(document).ready(() => {
     swipeToSlide: true,
   });
   append_json(products);
+  storeUpdate();
+
+
 });
 
-function storeUpdate() {
-  document.getElementById("amount").innerHTML = "$" + cartLS.total().toFixed(2) + " ";
-  document.getElementById("quantity").innerHTML = + cartLS. + "item(s)";
+function addBtnCallback(index) {
+  cartLS.add(products[index]);
+  storeUpdate();
 }
 
-storeUpdate()
+function storeUpdate() {
+  var quantity = 0;
+  cartLS.list().forEach(function(object) {
+    quantity += object["quantity"];
+  });
+
+  document.getElementById("quantity").innerHTML = quantity.toString() + " item(s) ";
+  document.getElementById("amount").innerHTML = "$" + cartLS.total().toFixed(2);
+}
+
 window.addEventListener("resize", landingMargin);

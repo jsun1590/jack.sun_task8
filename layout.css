@@ -100,11 +100,8 @@ header section {
   bottom: 6px;
 }
 header h2, i {
-
   display: inline;
   margin: 0;
-
-
   font-size: 1em;
   color: white;
   white-space: nowrap;
@@ -179,15 +176,93 @@ header h2, i {
 
 /* Style the main content section of the site*/
 main {
-
   padding: 0;
   width: 100%;
   background-color: #f1f1f1;
   height: 2000px;
   z-index: auto;
-
 }
 
+
+#store {
+  display: grid;
+  grid-template-areas:
+    "aside gallery1 gallery2"
+    "aside store store";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns:100px 1fr 1fr;
+}
+
+#c-aside {
+  grid-area: aside;
+}
+
+#store-container {
+  grid-area: store;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 300px));
+  grid-auto-rows: 350px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  padding: 10px 10px 10px;
+}
+
+.product {
+  border: 1px #ddd solid;
+}
+.memurl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  transition: ease-in-out 0.4s;
+}
+
+.memurl:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.memurl .thumb {
+  width: 80%;
+}
+
+#contact {
+  display: grid;
+  grid-template-areas:
+    "left right";
+  grid-template-columns: 1fr 1fr;
+}
+
+#c-left {
+  grid-area: left;
+    margin:0 20px;
+}
+
+#c-right {
+  grid-area: right;
+}
+
+#c-form {
+}
+
+.contact-info {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.contact-info p {
+  display: inline;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: black;
+}
 
 main #container {
   position: fixed;
@@ -220,11 +295,12 @@ main #overlay {
   left: 50%;
   /* HACK */
   transform: translate(-50%,110px);
-
 }
 
+
+
 main h1, p {
-  padding: 0 20px;
+  margin: 0 20px;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -263,30 +339,17 @@ main #brands img {
   width: auto;
 }
 
-main .store {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(155px, 300px));
-  grid-auto-rows: 450px;
-  grid-auto-flow: dense;
-  justify-content: center;
-  padding: 10px 10px 10px;
+
+
+
+
+
+
+
+
+#msgcontent {
+  height: 200px;
 }
-
-main .store .thumb {
-  width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
@@ -384,7 +447,7 @@ footer ul {
 }
 
 #ft-logo h1 {
-  margin-top: 50%;
+  margin-top: 150px;
   color: white;
 
 }
@@ -409,6 +472,7 @@ footer ul {
   grid-area: placeholder;
   background-color: #333;
 }
+
 #ft-copyright {
   grid-area: copyright;
   align-items: center;
@@ -430,7 +494,7 @@ footer ul {
 }
 
 #ft-social .fab {
-  color: red;
+  color: white;
   white-space: nowrap;
   font-size: 2em;
 }
@@ -466,6 +530,7 @@ footer ul {
     float: right;
     display: block;
   }
+}
 
 @media screen and (max-width: 900px) {
   .topnav.responsive {

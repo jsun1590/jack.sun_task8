@@ -22,14 +22,17 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
 <body onload="landingMargin()">
 
 <header>
-<img src="assets/logo/logo_hand.svg" alt="logo1" class="logo-hand">
-<a href="index.html">
-  <img src="assets/logo/logo_gear.svg" alt="logo2" class="logo-gear"></a>
+  <img src="assets/logo/logo_hand.svg" alt="logo1" class="logo-hand">
+  <a href="index.html">
+    <img src="assets/logo/logo_gear.svg" alt="logo2" class="logo-gear"></a>
 
-<h1><span id="title1">Retro</span>
-  <span id="title2"> Revolution</span>
-</h1>
-<h2>New Zealand's Leading Retro Game Store </h2>
+  <h1><span id="title1">Retro</span>
+    <span id="title2"> Revolution</span>
+  </h1>
+
+  <section>
+    <h2>New Zealand's Leading Retro Game Store</h2>
+  </section>
 
 </header>
 
@@ -45,9 +48,11 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
   <i class="fas fa-bars"></i></a>
 </nav>
 
-<main id="main">
-  <section class="container">
-    <form id="contact" action="https://jack-task8.herokuapp.com/email.php" method="post">
+<main id="contact">
+
+  <section id="c-left">
+    <div class="form">
+    <form id="c-form" action="https://jack-task8.herokuapp.com/email.php" method="post">
 
       <label for="fname">First Name</label>
       <input type="text" id="fname" placeholder="Enter your first name" required>
@@ -62,7 +67,7 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
       <input type="text" id="subject" placeholder="Enter a subject" required>
 
       <label for="content">Message Content</label>
-      <textarea id="msgcontent" placeholder="Enter your message" style="height:200px" required></textarea>
+      <textarea id="msgcontent" placeholder="Enter your message" required></textarea>
 
       <label for="self">Email a copy of this message to yourself</label>
       <br>
@@ -75,6 +80,25 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
       <input type="submit" id="submit" value="Submit">
 
     </form>
+    </div>
+  </section>
+
+  <section id="c-right">
+
+    <ul class="contact-info">
+      <li><h2>CONTACT</h2></li>
+      <li><p>Tel: </p><a href="tel:+61890989807">+61 8 9098 9807</a></li>
+      <li><p>Email: </p><a href="mailto:mail.retro.revolution@gmail.com">
+        mail.retro.revolution@gmail.com</a></li>
+      <li><p>Address: </p><a href="https://goo.gl/maps/yfg8NWjD7KeCoaD78">
+        69 Garfield Road
+        <br> Helensville, Auckland 0800,
+        <br> New Zealand</a></li>
+    </ul>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.671390055019!2d174.4523442158757!3d-36.68240127792555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d10397a270cbb%3A0x2346fb6dda3d1be5!2s69%20Garfield%20Road%2C%20Helensville%2C%20Auckland%200800%2C%20New%20Zealand!5e0!3m2!1sen!2sau!4v1603332335072!5m2!1sen!2sau
+    " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
   </section>
 </main>
 
