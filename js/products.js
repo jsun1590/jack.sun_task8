@@ -7,7 +7,7 @@ products =
     "imageSrc": "nes.png",
     "alt": "NES",
     "description": "epic.",
-    "rating": 3.7
+    "rating": 4.6
   },
 
   {

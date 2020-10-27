@@ -26,23 +26,21 @@ function append_json() {
   });
 }
 
-$(document).ready(() => {
-  append_json(products);
-  cartLS.destroy()
-  storeUpdate();
-});
-
 function addBtnCallback(index) {
   cartLS.add(products[index]);
   storeUpdate();
-}
+};
 
 function storeUpdate() {
   var quantity = 0;
   cartLS.list().forEach(function(object) {
-    quantity += object["quantity"];
+    quantity += object.quantity;
   });
+  $("#quantity").html(quantity.toString() + " item(s) ");
+  $("#amount").html("$" + cartLS.total().toFixed(2).toString());
+};
 
-  document.getElementById("quantity").innerHTML = quantity.toString() + " item(s) ";
-  document.getElementById("amount").innerHTML = "$" + cartLS.total().toFixed(2).toString();
-}
+$(document).ready(() => {
+  append_json(products);
+  storeUpdate();
+});

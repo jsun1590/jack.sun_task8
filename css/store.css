@@ -1,4 +1,7 @@
+.cart {
+  color: white;
 
+}
 #store {
   display: grid;
   grid-template-areas:
@@ -43,19 +46,28 @@
 }
 
 .memurl:hover {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(221, 32, 32, 0.5);
 }
 .memurl .thumb {
   width: 80%;
 }
 
+.price-container {
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+
+}
 .price {
   display: inline;
+  margin: 3px 0 0 0 !important;
+
 }
 .rating {
   display: inline;
-  float: right;
-  margin-right: 10% !important;
+  margin: 0 !important;
   -webkit-text-stroke: 0.5px #fc0;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;

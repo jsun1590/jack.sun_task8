@@ -1,0 +1,36 @@
+#c-container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "image info buttons";
+}
+
+.info {
+  grid-area: info;
+}
+.buttons {
+  grid-area: buttons;
+}
+
+.memurl {
+  grid-area: image;
+  height: 100px;
+    border: 1px solid;
+}
+
+.thumb {
+  border: 1px solid;
+  height: 80%;
+  width: auto;
+}
+
+#quantity {
+  width: 30px;
+}
