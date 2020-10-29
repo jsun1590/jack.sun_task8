@@ -17,7 +17,7 @@ $("#c-form").submit(function(event) {
     email: $("#email").val(),
     subject: $("#subject").val(),
     content: $("#msgcontent").val(),
-    submit: $("#submit").val()
+    self: $("#self-send").prop("checked")
   });
 
   // Alerts the results

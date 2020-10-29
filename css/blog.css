@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#blog {
+  display: grid;
+  grid-template-areas:
+    "aside article";
+  grid-template-columns:270px 1fr;
+}
+
+#b-aside {
+  margin-left: 15px;
+  grid-area: aside;
+  z-index: 0;
+  border-right: 2px #ddd solid;
+}
+
+#b-aside-links {
+  position: sticky;
+  top: 80px;
+}
+
+.bookmark {
+  display: block;
+}
+
+#b-container {
+  grid-area: article;
+  width: 90%;
+  margin: 0 5%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+  display: inline;
+}
+
+article {
+  border-bottom: 3px solid;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 40%;
+  margin-right:15px;
+  float: left;
+}
+
+p {
+
+}

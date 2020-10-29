@@ -36,16 +36,17 @@
 }
 
 #i-guarantees {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(155px, 300px));
-  grid-auto-rows: 350px;
-  grid-auto-flow: dense;
-  justify-content: center;
-  padding: 10px 10px 10px;
-}
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 
+}
+.guarantee-container {
+  width: 30%;
+}
 #i-guarantees h1 {
+  white-space: nowrap;
   text-align: center;
 }
 
@@ -105,11 +106,10 @@
   margin: 0 0 20px 0;
 }
 #testimonials p {
-  font-size: 1em;
 }
 
 .testimonial-box{
-  border: 1px solid gray;
+  border: 1px solid #ddd;
   height: 200px;
   margin-bottom: 20px;
   display: grid;
@@ -120,6 +120,12 @@
     "portrait review"
     "name review"
     "rating review";
+  transition: all 0.4s ease-in-out;
+}
+
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 17px -2px #999;
 }
 
 .portrait {

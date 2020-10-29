@@ -30,4 +30,14 @@ products =
     "rating": 5
   },
 
+  {
+    "id": 4,
+    "name": "Super Mario Bros.",
+    "price": 50,
+    "imageSrc": "smb_nes.png",
+    "alt": "Mario",
+    "description": "pog console.",
+    "rating": 5
+  },
+
 ];

@@ -12,8 +12,8 @@
 }
 
 #store p {
-  margin-left: 10%;
-  margin-right: 0;
+  margin: 0 10% 0 10%;
+
 }
 #s-aside {
   grid-area: aside;
@@ -26,14 +26,15 @@
   grid-area: store;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(155px, 330px));
-  grid-auto-rows: 350px;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 350px));
+  grid-auto-rows: 370px;
   grid-auto-flow: dense;
   justify-content: center;
   padding: 10px 10px 10px;
 }
 
 .product {
+    position: relative;
   border: 1px #ddd solid;
 }
 .memurl {
@@ -49,7 +50,7 @@
   background-color: rgba(221, 32, 32, 0.5);
 }
 .memurl .thumb {
-  width: 80%;
+  height: 75%;
 }
 
 .price-container {
@@ -74,9 +75,11 @@
 }
 
 .add {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
   display: block;
-  margin: auto;
-  margin-top: 20px;
   padding: 15px 25px;
   font-size: 24px;
   width: 80%;
@@ -96,5 +99,5 @@
 .add:active {
   background-color: #b31919;
   box-shadow: none;
-  transform: translateY(5px);
+  transform: translate(-50%, 5px);
 }
