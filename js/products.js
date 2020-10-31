@@ -6,8 +6,7 @@ products =
     "price": 120,
     "imageSrc": "nes.png",
     "alt": "NES",
-    "description": "epic.",
-    "rating": 4.6
+    "rating": 4.5
   },
 
   {
@@ -16,8 +15,7 @@ products =
     "price": 20,
     "imageSrc": "genesis.png",
     "alt": "Genesis",
-    "description": "pog console.",
-    "rating": 4.7
+    "rating": 3.4
   },
 
   {
@@ -26,8 +24,7 @@ products =
     "price": 200,
     "imageSrc": "snes.png",
     "alt": "Genesis",
-    "description": "pog console.",
-    "rating": 5
+    "rating": 4.6
   },
 
   {
@@ -36,7 +33,15 @@ products =
     "price": 50,
     "imageSrc": "smb_nes.png",
     "alt": "Mario",
-    "description": "pog console.",
+    "rating": 4
+  },
+
+  {
+    "id": 5,
+    "name": "The Legend of Zelda: A Link to the Past",
+    "price": 50,
+    "imageSrc": "alttp.png",
+    "alt": "ALTTP",
     "rating": 5
   },
 

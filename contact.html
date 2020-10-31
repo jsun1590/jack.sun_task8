@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hamburgers@1.1.3/dist/hamburgers.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=block" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"
 integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -23,8 +24,8 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
   <a href="index.html">
     <img src="assets/logo/logo_gear.svg" alt="logo2" class="logo-gear"></a>
 
-  <h1><span id="title1">Retro</span>
-    <span id="title2"> Revolution</span>
+  <h1><span class="title1">Retro</span>
+    <span class="title2"> Revolution</span>
   </h1>
 
   <section>
@@ -34,15 +35,20 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
 </header>
 
 
-<nav id="topnav" class="topnav">
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="store.html">Store</a>
-<a href="blog.html">Blog</a>
-<a href="events.html">Events</a>
-<a class="float-right active" href="contact.html">Contact Us</a>
-<a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-  <i class="fas fa-bars"></i></a>
+<nav id="sticky-nav">
+<div id="topnav" class="topnav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="store.html">Store</a>
+  <a href="blog.html">Blog</a>
+  <a href="events.html">Events</a>
+  <a class="float-right active" href="contact.html">Contact Us</a>
+  <button class="hamburger hamburger--collapse icon" type="button" onclick="responsiveNav()">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+  </button>
+</div>
 </nav>
 
 <main id="contact">
@@ -77,6 +83,15 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
       <input type="submit" id="submit" value="Submit">
 
     </form>
+    <div id="sending">
+      <i class="fas fa-spinner fa-pulse"></i>
+      <p>sending message, please do not close this page...</p>
+    </div>
+    <div id="sent">
+      <i class="fas fa-check-circle"></i>
+      <p>message sent! Check your spam folder if a copy was sent to yourself.</p>
+    </div>
+
     </div>
   </section>
 
@@ -93,18 +108,19 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
         <br> New Zealand</a></li>
     </ul>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.671390055019!2d174.4523442158757!3d-36.68240127792555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d10397a270cbb%3A0x2346fb6dda3d1be5!2s69%20Garfield%20Road%2C%20Helensville%2C%20Auckland%200800%2C%20New%20Zealand!5e0!3m2!1sen!2sau!4v1603332335072!5m2!1sen!2sau
-    " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.671390055019!2d174.4523442158757!3d-36.68240127792555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d10397a270cbb%3A0x2346fb6dda3d1be5!2s69%20Garfield%20Road%2C%20Helensville%2C%20Auckland%200800%2C%20New%20Zealand!5e0!3m2!1sen!2sau!4v1603332335072!5m2!1sen!2sau"
+    frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
   </section>
 </main>
 
 <footer>
-<section id="ft-logo">
-  <img src="assets/logo/logo_full.svg" alt="logo" class="logo-full"></img>
-  <h1> Retro Revolution </h1>
-
-</section>
+  <section id="ft-logo">
+    <img src="assets/logo/logo_full.png" alt="logo" class="logo-full"></img>
+    <h1><span class="title1">Retro</span>
+      <br>
+      <span class="title2"> Revolution</span></h1>
+  </section>
 
 <section id="ft-sitemap">
   <ul>

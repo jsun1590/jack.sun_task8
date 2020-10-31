@@ -5,9 +5,13 @@
   grid-template-columns: 1fr 1fr;
 }
 
+#about img {
+  width: 100%;
+}
+
 #a-left {
   grid-area: left;
-  margin: 0 20px 0 20%;
+  margin: 0 20px 0 10%;
 }
 
 #a-right {

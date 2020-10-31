@@ -4,6 +4,8 @@ $(document).ready(() => {
     animateOut: 'fadeOut',
     loop: true,
     autoplay: true,
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
+    touchDrag: false,
+    mouseDrag: false,
   });
 });

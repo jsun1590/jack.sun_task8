@@ -31,8 +31,13 @@
   margin-bottom: 10px;
 }
 
+.contact-info a {
+  text-decoration: none;
+  color: black;
+}
+
 .fas {
-  color: rgb(248, 153, 58);
+  color: #f99a3a;
   margin-right: 3px;
 }
 
@@ -40,15 +45,16 @@
   margin-left: 2px;
   margin-right: 5px;
 }
-.contact-info a {
-  text-decoration: none;
-  color: black;
+
+#map {
+  width:100%;
+  height: 50%;
+  border:0;
 }
-
-
 #msgcontent {
   height: 200px;
 }
+
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -63,15 +69,33 @@ input[type=text], select, textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #f99a3a;
   color: white;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #cf8031;
+}
+
+#sending, #sent {
+  display: none;
+  margin-top: 20px;
+}
+
+#sending i, p, #sent i, p {
+  display: inline;
+  vertical-align: middle;
+}
+
+#sending i, #sent i {
+  display: inline-block;
+
+}
+.fa-spinner, .fa-check-circle {
+  font-size: 2em;
 }

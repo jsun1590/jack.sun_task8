@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hamburgers@1.1.3/dist/hamburgers.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=block" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fddaefb134.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -21,8 +23,8 @@
       <img src="assets/logo/logo_gear.svg" alt="logo2" class="logo-gear"></a>
 
     <h1>
-      <span id="title1">Retro</span>
-      <span id="title2"> Revolution</span>
+      <span class="title1">Retro</span>
+      <span class="title2"> Revolution</span>
     </h1>
 
     <section>
@@ -30,45 +32,83 @@
     </section>
   </header>
 
-
-  <nav id="topnav" class="topnav">
+  <nav id="sticky-nav">
+  <div id="topnav" class="topnav">
     <a href="index.html">Home</a>
     <a href="about.html" class="active">About Us</a>
     <a href="store.html">Store</a>
     <a href="blog.html">Blog</a>
     <a href="events.html">Events</a>
     <a class="float-right" href="contact.html">Contact Us</a>
-    <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
-      <i class="fas fa-bars"></i></a>
+    <button class="hamburger hamburger--collapse icon" type="button" onclick="responsiveNav()">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    </button>
+  </div>
   </nav>
 
   <main id="about">
   <section id=a-left>
       <h1>About Us</h1>
     <p>Since our debut in 2018, Retro Revolution has provided New Zealand
-      and the world with top qulaity retro products. With a massive range to
+      and the world with top quality retro products. With a massive range to
       choose from, we solidify ourselves as New Zealand's premier retro
       game store.
     </p>
 
-    <h1>Expansion</h1>
-    <p>In August of 2019, we decided to expand our business internationally
-    to cater to a growing demand for high quality retro products.</p>
-    <h1>The Future</h1>
+
+    <h1>Our Team</h1>
+    <img src="assets/images/team.jpg" alt="Team Photo">
+    <p>We are a team passionate about retro gaming. </p>
+
+    <h1>Join Us</h1>
+    <img src="assets/images/join_us.png" alt="Join Us">
+    <p>Current positions available:</p>
+    <ul>
+      <li>Customer Service Representative</li>
+      <li>Social Media Representative</li>
+      <li>Repair and Inspection Engineer</li>
+    </ul>
+    <p>Want to join our team? <a href="contact.html">Message us</a> for an
+      application form!</p>
 
   </section>
+
   <section id="a-right">
-    <h1>Our Team</h1>
-    <h1>Join Us</h1>
+    <h1>Expansion</h1>
+    <img src="assets/images/expansion.jpg" alt="Expansion">
+    <p>In August of 2019, we decided to expand our business internationally
+    to cater to a growing demand for high quality retro products. To achieve
+    this, we partnered with Epic Shipping, a splendid logistic company that
+    makes sure our products remains high quality during the delivery phase, all
+    the way until it reaches you. Of course, this partnership also benefited
+    our original Auckland and New Zealand customers and supporters. New Zealand
+    customers are able to take advantage their Ovanite&#153; Shipping system,
+    which is guaranteed to deliver your order in only a day!</p>
+
+    <h1>The Future</h1>
+    <img src="assets/images/future.jpg" alt="Future">
+    <p>In the near future, Retro Revolution is planning to open up additional stores
+    and warehouses in not only other parts of New Zealand, but world wide! This
+    move is to ensure all of our customers will be able to enjoy the retro
+    gaming culture to the fullest extent. Additional physical stores wil allow us
+    to host our famous retro competitions across the world and drastically decrease
+    shipping time for international customers, as well as allow for the possibility
+    of same day shipping for our domestic customers.
+    </p>
+
+
   </section>
 
   </main>
 
   <footer>
     <section id="ft-logo">
-      <img src="assets/logo/logo_full.svg" alt="logo" class="logo-full"></img>
-      <h1> Retro Revolution </h1>
-
+      <img src="assets/logo/logo_full.png" alt="logo" class="logo-full"></img>
+      <h1><span class="title1">Retro</span>
+        <br>
+        <span class="title2"> Revolution</span></h1>
     </section>
 
     <section id="ft-sitemap">
@@ -122,6 +162,7 @@
       <a href="https://www.instagram.com/retro-revolution"><i class="fab fa-instagram-square"></i></a>
     </section>
   </footer>
+
 <script src="js/script.js"></script>
 <script src="js/about.js"></script>
 </body>

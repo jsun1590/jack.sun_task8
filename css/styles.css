@@ -63,6 +63,9 @@ p {
   font-size: 1.2em;
 }
 
+a {
+  color: #f99a3a;
+}
 /* Style the header */
 header {
   position: relative;
@@ -71,13 +74,13 @@ header {
   height: 160px;
 }
 
-header #title1 {
+.title1 {
   font-family: "SF Alien Encounters";
   font-weight: normal;
   letter-spacing: 2px;
 }
 
-header #title2 {
+.title2 {
   font-family: "Rubik Mono One";
   font-weight: normal;
   padding: 0;
@@ -92,7 +95,7 @@ header h1 {
   transform: translate(-50%,-50%);
   font-size: 6vw;
   white-space: nowrap;
-  color: rgb(248, 153, 58);
+  color: #f99a3a;
   transition: background-color 0.4s ease-in-out;
 }
 
@@ -129,14 +132,18 @@ header h2, i {
   transform: translate(15px, 15px) rotate(60deg);
 }
 
+#sticky-nav {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  overflow: visible;
+  z-index: 100;
+}
 .topnav {
   box-shadow: 0px 1px 10px black;
   clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
-  position: sticky;
-  top: 0;
   overflow: hidden;
   background-color: #333;
-  z-index: 100;
 }
 
 .topnav a {
@@ -164,12 +171,21 @@ header h2, i {
 
 .topnav a.active {
   background-color: #dd2020;
-  border-bottom: 3px solid rgb(248, 153, 58);
+  border-bottom: 3px solid #f99a3a;
   color: white;
 }
 
 .topnav .icon {
+  outline: none;
   display: none;
+}
+
+.topnav .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: white !important;
+}
+
+.hamburger.is-active:hover, .hamburger:hover {
+  opacity: 1 !important;
 }
 
 .topnav .float-right {
@@ -181,7 +197,7 @@ main {
   padding: 0;
   width: 100%;
   background-color: #f1f1f1;
-  height: 2000px;
+
   z-index: auto;
 }
 
@@ -232,7 +248,7 @@ footer a:hover {
 }
 footer h2 {
   color: white;
-  text-decoration: underline gray;
+  text-decoration: underline #f99a3a;
 }
 
 footer ul {
@@ -252,17 +268,24 @@ footer ul {
 
 #ft-logo .logo-full {
   position: absolute;
-  margin-top: 10px;
-  height: 150px;
+  margin-top: 20px;
+  width: 130px;
   border-radius: 50%;
 }
 
 #ft-logo h1 {
-  margin-top: 150px;
-  color: white;
-
+  display: block;
+  color: #f99a3a;
+  margin-top: 160px;
+  text-align: center;
 }
 
+#ft-logo .title1 {
+  font-size: 30px;
+}
+#ft-logo .title2 {
+  font-size: 25px;
+}
 #ft-sitemap {
   grid-area: sitemap;
   justify-content: flex-start;
@@ -334,19 +357,16 @@ footer ul {
     display: none;
   }
 
-  .topnav a.icon {
+  .topnav .icon {
+    display: block;
     font-family: Arial;
     font-size: 22px;
     padding: 16px 16px;
     float: right;
-    display: block;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .topnav.responsive {
-    position: sticky;
-  }
 
   .topnav.responsive .icon {
     position: absolute;
@@ -354,9 +374,7 @@ footer ul {
     top: 0;
   }
 
-  .topnav .icon:hover {
-    border-bottom: 3px solid transparent;
-  }
+
 
   .topnav.responsive a {
     float: none;

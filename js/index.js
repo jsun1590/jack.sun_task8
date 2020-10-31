@@ -3,6 +3,8 @@ function landingMargin() {
   document.getElementById("index").style.marginTop = landingHeight;
 }
 
+
+
 $(document).ready(() => {
   $('#owl-brands').owlCarousel({
     items: 4,

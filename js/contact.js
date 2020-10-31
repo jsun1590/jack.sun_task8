@@ -1,3 +1,7 @@
+$("#submit").click(function(){
+  $("#sending").css("display", "block");
+});
+
 // form handler
 $("#c-form").submit(function(event) {
 
@@ -22,7 +26,8 @@ $("#c-form").submit(function(event) {
 
   // Alerts the results
   posting.done(function() {
-    $("#result").text("success");
+    $("#sending").css("display", "none");
+    $("#sent").css("display", "block");
   });
 
   posting.fail(function() {

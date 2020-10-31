@@ -1,11 +1,20 @@
 function responsiveNav() {
-  var nav = document.getElementById("topnav");
-  if (nav.className === "topnav") {
-    nav.className += " responsive";
+  var nav = $("#topnav");
+  if (nav.attr("class") === "topnav") {
+    nav.addClass("responsive");
   } else {
-    nav.className = "topnav";
+    nav.removeClass("responsive");
   }
 }
+
+$(".icon").click(function(){
+  var nav = $(".icon");
+  if (nav.attr("class") === "hamburger hamburger--collapse icon") {
+    nav.addClass("is-active");
+  } else {
+    nav.removeClass("is-active");
+  }
+})
 
 jQuery(document.documentElement).keyup(function (event) {
 
