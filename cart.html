@@ -52,8 +52,14 @@
   </nav>
 
   <main id="cart">
-    <h1 id="title">Shopping Cart</h1>
+    <div id="title">
+    <h1>Shopping Cart</h1>
+    <a id="return-btn" class="button" href="store.html">Return to Store</a>
+    </div>
+
+
     <section id="c-container">
+      <h2 id="empty">Your Cart Is Empty, Add Some Items From The Store</h2>
       <script type="text/template" id="template">
         <div class="product">
       <span class="memurl"><img class="thumb"></span>
@@ -83,6 +89,8 @@
         <h2>Total Price: </h2>
         <h2 id="total-amount"></h2>
       </span>
+
+      <a id="checkout-btn" href="#">Checkout</a>
 
     </div>
   </main>

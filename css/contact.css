@@ -32,11 +32,14 @@
 }
 
 .contact-info a {
+  font-size: 1.2em;
+  vertical-align: bottom;
   text-decoration: none;
   color: black;
 }
 
-.fas {
+.fas, .fab {
+  vertical-align: middle;
   color: #f99a3a;
   margin-right: 3px;
 }
@@ -51,6 +54,19 @@
   height: 50%;
   border:0;
 }
+
+#social ul {
+  list-style: none;
+}
+
+#social a {
+  vertical-align: middle;
+}
+#social span {
+  text-decoration: underline;
+  text-decoration-color: #f1f1f1;
+}
+
 #msgcontent {
   height: 200px;
 }

@@ -13,7 +13,7 @@ html {
   grid-area: aside;
   z-index: 0;
   padding: 0 15px;
-  border-right: 2px #ddd solid;
+  border-right: 2px #f99a3a solid;
 }
 
 #b-aside-links {
@@ -23,11 +23,13 @@ html {
 
 #b-aside-links h1 {
   padding: 0 0 2px 5px;
+  margin-bottom: 5px;
   background-color: #f99a3a;
   color: white;
 }
 
 #b-aside-links ul {
+  margin: 0;
   list-style: none;
   padding: 0;
 }
@@ -61,10 +63,12 @@ html {
 
 #b-container h1 {
   font-size: 1.5em;
+  margin-bottom: 0;
 }
 
 #b-container h2 {
   font-size: 1.3em;
+  margin: 0;
   display: inline;
 }
 

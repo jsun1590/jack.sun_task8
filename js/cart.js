@@ -47,6 +47,7 @@ function check(quantity, index) {
 };
 
 function cartUpdate() {
+  empty();
   var quantity = 0;
   cartLS.list().forEach(function(object) {
     quantity += object.quantity;
@@ -56,6 +57,11 @@ function cartUpdate() {
   $("#total-amount").html("$" + cartLS.total().toFixed(2).toString());
 };
 
+function empty() {
+  if(!Array.isArray(cartLS.list()) || !cartLS.list().length) {
+    $("#empty").css("display", "block");
+  }
+}
 $(document).ready(() => {
   append_json(products);
   cartUpdate();

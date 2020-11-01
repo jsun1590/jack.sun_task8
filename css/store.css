@@ -5,10 +5,10 @@
 #store {
   display: grid;
   grid-template-areas:
-    "aside gallery1 gallery2"
-    "aside store store";
-  grid-template-rows: 100px 1fr;
-  grid-template-columns:270px 1fr 1fr;
+    "aside banner"
+    "aside store";
+  grid-template-rows: 350px 1fr;
+  grid-template-columns:270px 1fr;
 }
 
 #store p {
@@ -20,7 +20,7 @@
   grid-area: aside;
   z-index: 0;
   padding: 0 15px;
-  border-right: 2px #ddd solid;
+  border-right: 2px #f99a3a solid;
 }
 
 #s-aside-products {
@@ -30,7 +30,7 @@
 
 #s-aside-products h1 {
   padding: 0 0 2px 5px;
-  background-color: rgb(248, 153, 58);
+  background-color: #f99a3a;
   color: white;
 }
 
@@ -48,6 +48,10 @@
   color: #878787;
 }
 
+#banner {
+  grid-area: banner;
+  width: 100%;
+}
 #s-container {
   grid-area: store;
   display: grid;
@@ -61,7 +65,7 @@
 
 .product {
   position: relative;
-  border: 1px #ddd solid;
+  border: 1px #f99a3a solid;
 }
 .memurl {
   display: flex;
@@ -82,6 +86,9 @@ width: 80%;
 object-fit: contain;
 }
 
+.name {
+  margin-top: 10px !important;
+}
 .price-container {
   margin-left: 10%;
   display: flex;
