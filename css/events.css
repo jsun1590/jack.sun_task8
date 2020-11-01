@@ -6,12 +6,8 @@
   grid-template-columns:1fr 270px;
 }
 
-#events p {
-
-}
-#events .fas {
-  color: #f99a3a;
-  font-size: 100px;
+#events h1:first-of-type {
+  margin-top: 0;
 }
 
 #gallery {
@@ -40,7 +36,30 @@
 }
 
 .info {
-  margin: 0 10%
+  margin: 0 5%;
+}
+
+.info h1 {
+  margin-top: 50px;
+}
+
+.info h1:first-of-type {
+  margin: 0;
+}
+
+.info img {
+  height: 300px;
+}
+.prize {
+  list-style: none;
+  padding: 0;
+}
+
+.fas {
+  color: #f99a3a;
+  font-size: 100px;
+  vertical-align: center;
+  margin-top: 50px;
 }
 
 .table {

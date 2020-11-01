@@ -68,6 +68,8 @@ html {
 
 #b-container h2 {
   font-size: 1.3em;
+  font-weight: normal;
+  color: #878787;
   margin: 0;
   display: inline;
 }

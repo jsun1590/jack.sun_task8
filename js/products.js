@@ -12,7 +12,7 @@ products =
   {
     "id": 2,
     "name": "Sega Genesis",
-    "price": 20,
+    "price": 100,
     "imageSrc": "genesis.png",
     "alt": "Genesis",
     "rating": 3.4
@@ -21,7 +21,7 @@ products =
   {
     "id": 3,
     "name": "Super Nintendo Entertainment System",
-    "price": 200,
+    "price": 190,
     "imageSrc": "snes.png",
     "alt": "Genesis",
     "rating": 4.6
@@ -29,6 +29,15 @@ products =
 
   {
     "id": 4,
+    "name": "Original Game Boy",
+    "price": 130,
+    "imageSrc": "game_boy.png",
+    "alt": "Game Boy",
+    "rating": 5
+  },
+
+  {
+    "id": 5,
     "name": "Super Mario Bros.",
     "price": 50,
     "imageSrc": "smb_nes.png",
@@ -37,12 +46,38 @@ products =
   },
 
   {
-    "id": 5,
+    "id": 6,
     "name": "The Legend of Zelda: A Link to the Past",
-    "price": 50,
+    "price": 70,
     "imageSrc": "alttp.png",
     "alt": "ALTTP",
     "rating": 5
   },
 
+  {
+    "id": 7,
+    "name": "Sonic The Hedgehog",
+    "price": 30,
+    "imageSrc": "sonic.png",
+    "alt": "Sonic",
+    "rating": 3.5
+  },
+
+  {
+    "id": 8,
+    "name": "E.T.- The Extra Terrestrial",
+    "price": 5,
+    "imageSrc": "et.png",
+    "alt": "E.T.",
+    "rating": 0.5
+  },
+
+  {
+    "id": 9,
+    "name": "Evolution T-Shirt",
+    "price": 10,
+    "imageSrc": "shirt.png",
+    "alt": "T-Shirt",
+    "rating": 4.5
+  },
 ];

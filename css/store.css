@@ -6,8 +6,9 @@
   display: grid;
   grid-template-areas:
     "aside banner"
-    "aside store";
-  grid-template-rows: 350px 1fr;
+    "aside store"
+    "aside text";
+  grid-template-rows: 350px 1fr auto;
   grid-template-columns:270px 1fr;
 }
 
@@ -23,23 +24,38 @@
   border-right: 2px #f99a3a solid;
 }
 
-#s-aside-products {
-  position: sticky;
-  top: 80px;
-}
-
-#s-aside-products h1 {
+#s-aside h1 {
   padding: 0 0 2px 5px;
   background-color: #f99a3a;
   color: white;
 }
 
-#s-aside-products ul {
+#s-aside ul {
   list-style: none;
   padding: 0;
 }
-#s-aside-products li {
-  border-bottom: 2px dotted #424242;
+#s-aside li {
+  border-bottom: 2px dotted #f99a3a;
+}
+
+#s-aside li:last-of-type {
+  border-bottom: none;
+}
+
+#s-aside p {
+  margin: 0;
+}
+
+#s-aside img {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#s-aside button {
+  position: relative;
+  bottom: inherit;
+  width: 100%;
+  margin: 5px 0 20px 0;
 }
 
 .bookmark {
@@ -55,30 +71,35 @@
 #s-container {
   grid-area: store;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(155px, 300px));
   grid-auto-rows: 370px;
   grid-auto-flow: dense;
   justify-content: center;
   padding: 10px 10px 10px;
+  margin-bottom: 10px;
 }
 
 .product {
   position: relative;
-  border: 1px #f99a3a solid;
+  border-radius: 6px;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.5);
 }
+
 .memurl {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 200px;
-  border-bottom: 1px solid #ddd;
+  background-color: rgba(113, 113, 113, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 4px 3px -3px rgba(0,0,0,0.5);
   transition: ease-in-out 0.4s;
 }
 
 .memurl:hover {
-  background-color: rgba(221, 32, 32, 0.5);
+  background-color: rgba(248, 153, 58, 0.7);
 }
 .memurl .thumb {
 height: 80%;
@@ -88,6 +109,7 @@ object-fit: contain;
 
 .name {
   margin-top: 10px !important;
+  font-weight: bold;
 }
 .price-container {
   margin-left: 10%;
@@ -98,6 +120,7 @@ object-fit: contain;
 }
 .price {
   display: inline;
+  color: #878787;
   margin: 3px 0 0 0 !important;
 
 }
@@ -125,14 +148,21 @@ object-fit: contain;
   background-color: #dd2020;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 5px #999;
+  box-shadow: 0 5px #9a1414;
   transition: all 0.1s ease-in-out;
 }
 
-.add:hover {background-color: #b31919}
+.add:hover {background-color: #bb1a1a}
 
 .add:active {
-  background-color: #b31919;
+  background-color: #bb1a1a;
   box-shadow: none;
   transform: translate(-50%, 5px);
+}
+
+#return {
+  grid-area: text;
+  margin: 0 0 20px 0;
+  text-align: center;
+
 }

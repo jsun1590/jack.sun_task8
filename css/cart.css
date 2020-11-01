@@ -125,16 +125,16 @@
   background-color: #dd2020;
   text-decoration: none;
   border-radius: 15px;
-  box-shadow: 0 5px #999;
+  box-shadow: 0 5px #9a1414;
   transition: all 0.1s ease-in-out;
 }
 
 #checkout-btn:hover {
-  background-color: #b31919
+  background-color: #bb1a1a
 }
 
 #checkout-btn:active {
-  background-color: #b31919;
+  background-color: #bb1a1a;
   box-shadow: none;
   transform: translateY(5px);
 }
